@@ -52,7 +52,7 @@ PPO_KWARGS = dict(
     n_epochs=10,
     gamma=0.95,
     gae_lambda=0.95,
-    clip_range=0.1,
+    clip_range=0.3,
     ent_coef=0.05,
     vf_coef=0.5,
 )
