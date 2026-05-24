@@ -1,4 +1,4 @@
-# dairy-rl-diet-optimisation
+# RL for Dairy Cow Feed Optimisation
 
 Reinforcement learning framework for optimising dairy cow feeding strategies under economic and environmental objectives.
 
