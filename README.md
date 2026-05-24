@@ -96,11 +96,10 @@ python sac.py
 # Repository Structure
 
 ```text
+├── simulationLibrary.py
 ├── env_dairy_mode3.py
 ├── ppo.py
 ├── sac.py
-├── simulateModel.py
-├── simulationLibrary.py
 ├── requirements.txt
 ├── plot_diet_composition_ppo.py
 ├── plot_ppo_methane_min.py
@@ -114,6 +113,7 @@ python sac.py
 Eleni Anastasi  
 MSc Statistics & Data Science  
 Leiden University
+Wageningen University
 
 ---
 
