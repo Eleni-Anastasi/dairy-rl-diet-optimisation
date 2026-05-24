@@ -1,27 +1,9 @@
 # RL for Dairy Cow Feed Optimisation
 
-Reinforcement learning framework for optimising dairy cow feeding strategies under economic and environmental objectives.
-
-This project applies Proximal Policy Optimization (PPO) and Soft Actor-Critic (SAC) agents to a dairy cow simulation environment in order to learn feeding policies that balance:
-
-- Feed margin
-- Enteric methane emissions
-
-The environment is based on a dynamic dairy cow model representing lactation Mode 3 over an 83-day horizon.
+This project applies Reinforcement Learning (RL) — specifically PPO (Proximal Policy Optimisation) and SAC (Soft Actor-Critic) — to optimise the daily feed ration of a dairy cow in Mode 3 (milking, non-pregnant). The goal is to find diet compositions that maximise the feed margin (milk revenue minus feed cost) while minimising enteric methane (CH₄) emissions.
 
 ---
 
-# Project Overview
-
-The reinforcement learning agent interacts with a simulated dairy cow environment by selecting daily diet compositions. The learned feeding strategies aim to optimise long-term performance while satisfying nutritional constraints.
-
-The project investigates:
-- Economic vs environmental trade-offs
-- PPO vs SAC performance
-- Stability across multiple random seeds
-- Learned diet compositions over time
-
----
 
 # Environment
 
@@ -95,28 +77,16 @@ python sac.py
 
 # Repository Structure
 
-```text
-├── simulationLibrary.py
-├── env_dairy_mode3.py
-├── ppo.py
-├── sac.py
-├── requirements.txt
-├── plot_diet_composition_ppo.py
-├── plot_ppo_methane_min.py
+├── simulationLibrary.py          # Core dairy cow hybrid state-space model (f3, g3, parameters)
+├── env_dairy_mode3.py            # Gymnasium RL environment wrapping the cow model
+├── ppo.py                        # PPO training script (Stable-Baselines3)
+├── sac.py                        # SAC training script (Stable-Baselines3)
+├── plot_diet_composition_ppo.py  # Plot learned diet composition over episode
+├── plot_ppo_methane_min.py       # Plot methane minimisation results for PPO
+├── requirements.txt              # Python dependencies
 └── README.md
-```
 
----
 
-# Author
 
-Eleni Anastasi  
-MSc Statistics & Data Science  
-Leiden University
-Wageningen University
 
----
 
-# Research Context
-
-This repository was developed as part of a Master's thesis on reinforcement learning for sustainable dairy feeding optimisation.
