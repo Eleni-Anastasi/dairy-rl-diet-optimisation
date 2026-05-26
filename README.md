@@ -35,7 +35,7 @@ $$
 
 where both feed margin and methane are normalised.
 
-The value of \( \lambda \) controls the objective:
+The value of λ controls the objective:
 
 | Lambda | Objective | Interpretation |
 |---|---|---|
@@ -43,7 +43,9 @@ The value of \( \lambda \) controls the objective:
 | 0.5 | Combined objective | Balance between feed margin and methane reduction |
 | 1.0 | Methane minimisation | Environmental objective only |
 
-A higher \( \lambda \) gives more importance to methane reduction, while a lower \( \lambda \) gives more importance to feed margin.
+
+A higher λ gives more importance to methane reduction, while a lower λ gives more importance to feed margin.
+
 ---
 
 # Algorithms
