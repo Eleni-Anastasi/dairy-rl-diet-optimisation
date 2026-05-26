@@ -118,7 +118,6 @@ Additional experiment and plotting scripts:
 ├── plot_ppo_methane_min.py
 ├── ppo_methane_min_5seeds.py
 ├── sac_methane_5seeds.py
-├── simulateModel.py
 ```
 
 
