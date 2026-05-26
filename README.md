@@ -37,7 +37,7 @@ where both feed margin and methane are normalised.
 
 The value of λ controls the objective:
 
-| Lambda | Objective | Interpretation |
+| Lambda | Objective |
 |---|---|---|
 | 0.0 | Feed margin maximisation |
 | 0.5 | Combined objective |
