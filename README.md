@@ -30,10 +30,7 @@ Actions correspond to diet ingredient proportions on a dry matter basis.
 The reward function balances economic and environmental objectives using a weighted formulation:
 
 \[
-R_t =
-(1-\lambda)\cdot FeedMargin_{norm,t}
--
-\lambda \cdot Methane_{norm,t}
+R_t = (1-\lambda)\cdot FeedMargin_{norm,t} - \lambda \cdot Methane_{norm,t}
 \]
 
 where both feed margin and methane are normalised.
