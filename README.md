@@ -36,12 +36,6 @@ ppo.py
 sac.py
 ```
 
-Additional experiments:
-```python
-ppo_methane_min_5seeds.py
-sac_methane_5seeds.py
-```
-
 ---
 
 # Installation
@@ -75,16 +69,33 @@ Train SAC:
 python sac.py
 ```
 
+During training, the scripts periodically evaluate the current policy and save:
+
+```text
+eval_history.csv
+```
+
+The best-performing model snapshot and final trained model are automatically saved.
+
+
 # Repository Structure
 
-├── simulationLibrary.py          # Core dairy cow hybrid state-space model (f3, g3, parameters)
-├── env_dairy_mode3.py            # Gymnasium RL environment wrapping the cow model
-├── ppo.py                        # PPO training script (Stable-Baselines3)
-├── sac.py                        # SAC training script (Stable-Baselines3)
-├── plot_diet_composition_ppo.py  # Plot learned diet composition over episode
-├── plot_ppo_methane_min.py       # Plot methane minimisation results for PPO
-├── requirements.txt              # Python dependencies
-└── README.md
+```text
+Core files:
+├── simulationLibrary.py      # Core dairy cow model
+├── env_dairy_mode3.py        # RL environment
+├── ppo.py                    # PPO training
+├── sac.py                    # SAC training
+├── requirements.txt
+├── README.md
+
+Additional experiment and plotting scripts:
+├── plot_diet_composition_ppo.py
+├── plot_ppo_methane_min.py
+├── ppo_methane_min_5seeds.py
+├── sac_methane_5seeds.py
+├── simulateModel.py
+```
 
 
 
