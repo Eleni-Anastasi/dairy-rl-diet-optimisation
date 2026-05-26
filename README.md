@@ -15,10 +15,13 @@ env_dairy_mode3.py
 
 The state space includes:
 - Feed margin
-- DVE requirement/intake
+- DVE requirement
+- DVE intake
 - OEB intake
+- Fresh matter intake
 - Milk production
 - Methane emissions
+
 
 Actions correspond to diet ingredient proportions on a dry matter basis.
 
