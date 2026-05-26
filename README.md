@@ -39,9 +39,9 @@ The value of λ controls the objective:
 
 | Lambda | Objective | Interpretation |
 |---|---|---|
-| 0.0 | Feed margin maximisation | Economic objective only |
-| 0.5 | Combined objective | Balance between feed margin and methane reduction |
-| 1.0 | Methane minimisation | Environmental objective only |
+| 0.0 | Feed margin maximisation |
+| 0.5 | Combined objective |
+| 1.0 | Methane minimisation |
 
 
 A higher λ gives more importance to methane reduction, while a lower λ gives more importance to feed margin.
