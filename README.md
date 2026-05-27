@@ -106,7 +106,8 @@ The best-performing model snapshot and final trained model are automatically sav
 
 ```text
 Core files:
-├── simulationLibrary.py      # Core dairy cow model
+├── libraries/
+│   └── simulationLibrary.py  # Core dairy cow hybrid state-space model
 ├── env_dairy_mode3.py        # RL environment
 ├── ppo.py                    # PPO training
 ├── sac.py                    # SAC training
