@@ -1,19 +1,42 @@
-# RL for Dairy Cow Feed Optimisation
+# Reinforcement Learning for Dairy Cow Feed Optimisation
 
-This project applies Reinforcement Learning (RL) — specifically PPO (Proximal Policy Optimisation) and SAC (Soft Actor-Critic) — to optimise the daily feed ration of a dairy cow in Mode 3 (milking, non-pregnant). The goal is to find diet compositions that maximise the feed margin (milk revenue minus feed cost) while minimising enteric methane (CH₄) emissions.
+This repository contains the implementation of my Master's thesis on applying **Deep Reinforcement Learning (RL)** to optimise dairy cow feeding strategies. The project investigates whether RL agents can learn feed compositions that simultaneously **maximize economic return** and **reduce enteric methane (CH₄) emissions**, while satisfying nutritional constraints.
+
+Two state-of-the-art continuous control algorithms are implemented:
+
+- **Proximal Policy Optimization (PPO)**
+- **Soft Actor-Critic (SAC)**
+
+The RL agents interact with a custom **OpenAI Gym/Gymnasium environment**, which is connected to a mechanistic dairy cow simulation model that predicts milk production, methane emissions, nutrient utilisation, and feed efficiency.
 
 ---
 
+# Project Objectives
+
+The objective is to determine an optimal daily feed ration for a **Mode 3 dairy cow (milking, non-pregnant)** by balancing multiple competing goals:
+
+- Maximise feed margin (milk revenue − feed costs)
+- Minimise enteric methane emissions
+- Satisfy nutritional requirements (DVE, OEB, fresh matter intake)
+
+This problem represents a continuous optimisation task where improving one objective often negatively impacts another.
+
+---
 
 # Environment
 
-The environment is implemented in:
+The custom reinforcement learning environment is implemented in:
 
-```python
+```
 env_dairy_mode3.py
 ```
 
-The state space includes:
+Each environment step simulates one feeding decision and returns the resulting animal performance.
+
+## Observation Space
+
+The agent observes:
+
 - Feed margin
 - DVE requirement
 - DVE intake
@@ -22,12 +45,18 @@ The state space includes:
 - Milk production
 - Methane emissions
 
+## Action Space
 
-Actions correspond to diet ingredient proportions on a dry matter basis.
+Actions represent the proportions of feed ingredients (dry matter basis) used to compose the daily ration.
 
-# Reward Formulation
+The environment automatically enforces practical feeding constraints and evaluates each proposed diet using the dairy cow simulation model.
 
-The reward function balances economic and environmental objectives using a weighted formulation:
+---
+
+
+## Reward Formulation
+
+The optimisation objective is formulated as a weighted combination of economic performance and environmental impact:
 
 $$
 R_t = (1-\lambda)\cdot FeedMargin_{norm,t} - \lambda \cdot Methane_{norm,t}
@@ -121,6 +150,33 @@ Additional experiment and plotting scripts:
 ├── sac_methane_5seeds.py
 ```
 
+
+
+
+# Technologies
+
+- Python
+- PyTorch
+- Stable-Baselines3
+- Gymnasium
+- NumPy
+- Pandas
+- Matplotlib
+
+---
+
+# Research Focus
+
+This project combines techniques from:
+
+- Reinforcement Learning
+- Deep Learning
+- Optimisation
+- Precision Livestock Farming
+- Sustainable Agriculture
+- Simulation Modelling
+
+---
 
 
 
